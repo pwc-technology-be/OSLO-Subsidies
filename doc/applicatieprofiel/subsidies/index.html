@@ -195,6 +195,7 @@
                       <a href="#Definitie">Definitie</a> |
                       <a href="#Financiële Transactie">Financiële Transactie</a> |
                       <a href="#Organisatie">Organisatie</a> |
+                      <a href="#Participatie">Participatie</a> |
                       <a href="#Publieke Organisatie">Publieke Organisatie</a> |
                       <a href="#Subisidietoekenningbesluit">Subisidietoekenningbesluit</a> |
                       <a href="#Subsidie Niet-toekenning">Subsidie Niet-toekenning</a> |
@@ -216,8 +217,8 @@
               </div>
             </div>
             <div class="region region--no-space-top">
-              <a href="/OSLO-Subsidies/cms/ap/subsidies/OSLO-Subsidies.jpg" target="_blank">
-                 <img src="/OSLO-Subsidies/cms/ap/subsidies/OSLO-Subsidies.jpg" />
+              <a href="/cms/ap/Subsidies/overview.jpg" target="_blank">
+                 <img src="/cms/ap/Subsidies/overview.jpg" />
               </a>
             </div>
             <div class="region region--no-space-top">
@@ -356,11 +357,45 @@
                     
                     <dt>Eigenschappen</dt>
                     
-                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Agent%3Aspeelt%20rol">speelt rol</a>.</dd>
                     
                   </dl>
                 </div>
                 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Agent%3Aspeelt%20rol" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/playsRole">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/playsRole" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/playsRole" data-placement="right">
+                            speelt rol</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.europa.eu/m8g/Participation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Participation" data-placement="right">Participatie</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">TODO</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
             </div>
             
             <div class="region region--no-space-top">
@@ -431,9 +466,9 @@
                             op basis van</a>
                           </code>
                         </td>
-                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">CriteriumBeoordeling</a></td>
+                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">Advies</a></td>
                         <td>0...*</td>
-                        <td property="rdfs:comment">De criteriumbeoordelingen waarop men zich gebaseerd heeft om de beoordeling te vormen.</td>
+                        <td property="rdfs:comment">Het advies dat men in beraadslaging heeft genomen om de beoordeling te vormen.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -445,9 +480,9 @@
                             op basis van</a>
                           </code>
                         </td>
-                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">Advies</a></td>
+                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">CriteriumBeoordeling</a></td>
                         <td>0...*</td>
-                        <td property="rdfs:comment">Het advies dat men in beraadslaging heeft genomen om de beoordeling te vormen.</td>
+                        <td property="rdfs:comment">De criteriumbeoordelingen waarop men zich gebaseerd heeft om de beoordeling te vormen.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -708,9 +743,9 @@
                             over</a>
                           </code>
                         </td>
-                        <td><a href="http://data.vlaanderen.be/ns/subsidies#CriteriumVereiste" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#CriteriumVereiste" data-placement="right">CriteriumVereiste</a></td>
+                        <td><a href="http://data.vlaanderen.be/ns/subsidies#Criterium" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#Criterium" data-placement="right">Criterium</a></td>
                         <td>0...1</td>
-                        <td property="rdfs:comment">Criteriumvereiste waarop de consumptie beoordeeld wordt.</td>
+                        <td property="rdfs:comment">Criterium waarop de consumptie beoordeeld wordt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -722,9 +757,9 @@
                             over</a>
                           </code>
                         </td>
-                        <td><a href="http://data.vlaanderen.be/ns/subsidies#Criterium" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#Criterium" data-placement="right">Criterium</a></td>
+                        <td><a href="http://data.vlaanderen.be/ns/subsidies#CriteriumVereiste" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#CriteriumVereiste" data-placement="right">CriteriumVereiste</a></td>
                         <td>0...1</td>
-                        <td property="rdfs:comment">Criterium waarop de consumptie beoordeeld wordt.</td>
+                        <td property="rdfs:comment">Criteriumvereiste waarop de consumptie beoordeeld wordt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1143,6 +1178,70 @@
             </div>
             
             <div class="region region--no-space-top">
+              <h3 class="h3" id="Participatie"><a href="http://data.europa.eu/m8g/Participation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Participation" data-placement="right">Participatie</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Deelname aan een publieke dienstverlening door een agent.</dd>
+                    
+                    <dt>Eigenschappen</dt>
+                    
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Participatie%3Abeschrijving">beschrijving</a>, 
+                      <a href="#Participatie%3Arol">rol</a>.</dd>
+                    
+                  </dl>
+                </div>
+                
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Participatie%3Abeschrijving" typeof="rdfs:Property" resource="http://purl.org/dc/terms/description">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://purl.org/dc/terms/description" data-toggle="tooltip" data-content="http://purl.org/dc/terms/description" data-placement="right">
+                            beschrijving</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">Beschrijving van de participatie.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Participatie%3Arol" typeof="rdfs:Property" resource="http://data.europe.eu/m8g/role">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europe.eu/m8g/role" data-toggle="tooltip" data-content="http://data.europe.eu/m8g/role" data-placement="right">
+                            rol</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">ParticipatieRol</a></td>
+                        <td>1</td>
+                        <td property="rdfs:comment">De rol die de participant speelt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
+            </div>
+            
+            <div class="region region--no-space-top">
               <h3 class="h3" id="Publieke Organisatie"><a href="http://data.europa.eu/m8g/PublicOrganisation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/PublicOrganisation" data-placement="right">Publieke Organisatie</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
@@ -1404,7 +1503,7 @@
                             vergt</a>
                           </code>
                         </td>
-                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">CriteriumVereiste</a></td>
+                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">VereistenGroep</a></td>
                         <td>0...*</td>
                         <td property="rdfs:comment">Vereistengroep of criteriumvereiste die voldaan moet zijn om recht te hebben op het subsidiebedrag.</td>
                         <td property="vann:usageNote"></td>
@@ -1418,7 +1517,7 @@
                             vergt</a>
                           </code>
                         </td>
-                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">VereistenGroep</a></td>
+                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">CriteriumVereiste</a></td>
                         <td>0...*</td>
                         <td property="rdfs:comment">Vereistengroep of criteriumvereiste die voldaan moet zijn om recht te hebben op het subsidiebedrag.</td>
                         <td property="vann:usageNote"></td>
@@ -1631,6 +1730,7 @@
                       <a href="#Subsidiemaatregel%20Consumptie%3Aaangevraagd%20bedrag">aangevraagd bedrag</a>, 
                       <a href="#Subsidiemaatregel%20Consumptie%3Aaanvraagdatum">aanvraagdatum</a>, 
                       <a href="#Subsidiemaatregel%20Consumptie%3Abehandelt%20een">behandelt een</a>, 
+                      <a href="#Subsidiemaatregel%20Consumptie%3Aheeft%20participatie">heeft participatie</a>, 
                       <a href="#Subsidiemaatregel%20Consumptie%3Ais%20instantie%20van">is instantie van</a>, 
                       <a href="#Subsidiemaatregel%20Consumptie%3Aproduceert">produceert</a>, 
                       <a href="#Subsidiemaatregel%20Consumptie%3Awordt%20uitgevoerd%20door">wordt uitgevoerd door</a>.</dd>
@@ -1691,6 +1791,20 @@
                         <td><a href="http://data.vlaanderen.be/ns/subsidies#Subsidievoorwerp" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#Subsidievoorwerp" data-placement="right">Subsidievoorwerp</a></td>
                         <td>0...*</td>
                         <td property="rdfs:comment">Het voorwerp dat al dan niet gesubsidieerd wordt met de consumptie.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Subsidiemaatregel%20Consumptie%3Aheeft%20participatie" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/hasParticipation">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/hasParticipation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/hasParticipation" data-placement="right">
+                            heeft participatie</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.europa.eu/m8g/Participation" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/Participation" data-placement="right">Participatie</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">TODO</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
