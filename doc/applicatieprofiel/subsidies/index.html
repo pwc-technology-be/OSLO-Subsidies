@@ -48,7 +48,7 @@
               <div class="head" role="contentinfo" id="respecHeader">
                 <dl>
                   <dt>Laatste aanpassing</dt>
-                  <dd>2019-06-19</dd>
+                  <dd>2019-07-01</dd>
 
                   
                   
@@ -77,6 +77,15 @@
                   
                   
                   <dt>Editors</dt>
+                  
+                  <dd inlist="" rel="bibo:editor" class="p-author h-card vcard">
+                    <span typeof="foaf:Person">
+                      <span class="p-name fn" property="foaf:lastName">De Meester</span>,
+                      <span class="p-name fn" property="foaf:firstName">Anouk</span>
+                      - <a href="http://www.skryv.com" class="p-org org h-org h-card" rel="foaf:workplaceHomepage">Skryv</a>
+                      - <span class="ed_mailto"><a href="mailto:anouk.demeester@skryv.com" rel="foaf:mbox" class="u-email email">anouk.demeester@skryv.com</a></span>
+                    </span>
+                  </dd>
                   
                   <dd inlist="" rel="bibo:editor" class="p-author h-card vcard">
                     <span typeof="foaf:Person">
@@ -197,6 +206,7 @@
                       <a href="#Subsidieprocedurestap">Subsidieprocedurestap</a> |
                       <a href="#Subsidiereglement">Subsidiereglement</a> |
                       <a href="#Subsidietoekenning">Subsidietoekenning</a> |
+                      <a href="#Subsidievoorwerp">Subsidievoorwerp</a> |
                       <a href="#Vereistengroep">Vereistengroep</a> |
                     </p>
                   </div>
@@ -225,10 +235,10 @@
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Advies%3Aadviseert">adviseert</a>, 
                       <a href="#Advies%3Abeschrijving">beschrijving</a>, 
-                      <a href="#Advies%3Abevat%20criteriumbeoordeling">bevat criteriumbeoordeling</a>, 
                       <a href="#Advies%3Adatum">datum</a>, 
                       <a href="#Advies%3Agegeven%20door">gegeven door</a>, 
-                      <a href="#Advies%3Agunstig">gunstig</a>.</dd>
+                      <a href="#Advies%3Agunstig">gunstig</a>, 
+                      <a href="#Advies%3Aop%20basis%20van">op basis van</a>.</dd>
                     
                   </dl>
                 </div>
@@ -276,20 +286,6 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="Advies%3Abevat%20criteriumbeoordeling" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/subsidies#bevatCriteriumBeoordeling">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/subsidies#bevatCriteriumBeoordeling" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#bevatCriteriumBeoordeling" data-placement="right">
-                            bevat criteriumbeoordeling</a>
-                          </code>
-                        </td>
-                        <td><a href="http://schema.org/Review" data-toggle="tooltip" data-content="http://schema.org/Review" data-placement="right">CriteriumBeoordeling</a></td>
-                        <td>0...*</td>
-                        <td property="rdfs:comment">Criteriumbeoordeling waarop het advies gestaafd is.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Advies%3Adatum" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/subsidies#datum">
                         <td>
                           <code property="rdfs:label">
@@ -332,6 +328,20 @@
                         <td></td>
                       </tr>
                     
+                      <tr id="Advies%3Aop%20basis%20van" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/subsidies#opBasisVan">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/subsidies#opBasisVan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#opBasisVan" data-placement="right">
+                            op basis van</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">CriteriumBeoordeling</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Criteriumbeoordeling waarop het advies is gestaafd.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
                     </tbody>
                   </table>
                 </div>
@@ -357,16 +367,16 @@
               <h3 class="h3" id="Beoordeling"><a href="http://data.vlaanderen.be/ns/subsidies#Beoordeling" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#Beoordeling" data-placement="right">Beoordeling</a></h3>
                 <div class="region region--no-space-top">
                   <dl>
-                    <dt>Beschrijving</dt><dd>De motivering van de subsidiebeslissing, eventueel op basis van criteriumbeoordelingen.</dd>
+                    <dt>Beschrijving</dt><dd>De motivering van de subsidiebeslissing, gebaseerd op criteriumbeoordelingen en adviezen.</dd>
                     
                     <dt>Eigenschappen</dt>
                     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Beoordeling%3Ageeft%20aanleiding%20tot">geeft aanleiding tot</a>, 
-                      <a href="#Beoordeling%3Ais%20genomen%20op%20grond%20van">is genomen op grond van</a>, 
                       <a href="#Beoordeling%3Amotivering">motivering</a>, 
-                      <a href="#Beoordeling%3Aover">over</a>, 
-                      <a href="#Beoordeling%3Araadpleegt">raadpleegt</a>.</dd>
+                      <a href="#Beoordeling%3Aop%20basis%20van">op basis van</a>, 
+                      <a href="#Beoordeling%3Aop%20basis%20van">op basis van</a>, 
+                      <a href="#Beoordeling%3Aover">over</a>.</dd>
                     
                   </dl>
                 </div>
@@ -400,20 +410,6 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="Beoordeling%3Ais%20genomen%20op%20grond%20van" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/subsidies#isGenomenOpGrondVan">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/subsidies#isGenomenOpGrondVan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#isGenomenOpGrondVan" data-placement="right">
-                            is genomen op grond van</a>
-                          </code>
-                        </td>
-                        <td><a href="http://schema.org/Review" data-toggle="tooltip" data-content="http://schema.org/Review" data-placement="right">CriteriumBeoordeling</a></td>
-                        <td>0...*</td>
-                        <td property="rdfs:comment">De criteriumbeoordelingen waarop men zich gebaseerd heeft om de beoordeling te vormen.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                       <tr id="Beoordeling%3Amotivering" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/subsidies#motivering">
                         <td>
                           <code property="rdfs:label">
@@ -428,30 +424,44 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="Beoordeling%3Aover" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/subsidies#over">
+                      <tr id="Beoordeling%3Aop%20basis%20van" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/subsidies#opBasisVan">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/subsidies#over" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#over" data-placement="right">
+                            <a href="http://data.vlaanderen.be/ns/subsidies#opBasisVan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#opBasisVan" data-placement="right">
+                            op basis van</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">CriteriumBeoordeling</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">De criteriumbeoordelingen waarop men zich gebaseerd heeft om de beoordeling te vormen.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Beoordeling%3Aop%20basis%20van" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/subsidies#opBasisVan">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/subsidies#opBasisVan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#opBasisVan" data-placement="right">
+                            op basis van</a>
+                          </code>
+                        </td>
+                        <td><a href="http://www.w3.org/2000/01/rdf-schema#Resource" data-toggle="tooltip" data-content="http://www.w3.org/2000/01/rdf-schema#Resource" data-placement="right">Advies</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Het advies dat men in beraadslaging heeft genomen om de beoordeling te vormen.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Beoordeling%3Aover" typeof="rdfs:Property" resource="http://schema.org/about">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://schema.org/about" data-toggle="tooltip" data-content="http://schema.org/about" data-placement="right">
                             over</a>
                           </code>
                         </td>
                         <td><a href="http://data.vlaanderen.be/ns/subsidies#SubsidiemaatregelConsumptie" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#SubsidiemaatregelConsumptie" data-placement="right">SubsidiemaatregelConsumptie</a></td>
                         <td>1</td>
                         <td property="rdfs:comment">De consumptie die beoordeeld wordt.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Beoordeling%3Araadpleegt" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/subsidies#raadpleegt">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/subsidies#raadpleegt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#raadpleegt" data-placement="right">
-                            raadpleegt</a>
-                          </code>
-                        </td>
-                        <td><a href="http://data.vlaanderen.be/ns/subsidies#Advies" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#Advies" data-placement="right">Advies</a></td>
-                        <td>0...*</td>
-                        <td property="rdfs:comment">Het advies dat men in beraadslaging heeft genomen om de beoordeling te vormen.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -503,7 +513,7 @@
                             criteriumtype</a>
                           </code>
                         </td>
-                        <td><a href="" data-toggle="tooltip" data-content="" data-placement="right">Criteriumtype</a></td>
+                        <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">CriteriumType</a></td>
                         <td>1</td>
                         <td property="rdfs:comment">Het type van het criterium. Deze wordt bepaald door een gecontroleerd vocabularium.</td>
                         <td property="vann:usageNote">Bijvoorbeeld: &lt;doelgroep&gt;.</td>
@@ -698,9 +708,9 @@
                             over</a>
                           </code>
                         </td>
-                        <td><a href="http://data.vlaanderen.be/ns/subsidies#Criterium" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#Criterium" data-placement="right">Criterium</a></td>
+                        <td><a href="http://data.vlaanderen.be/ns/subsidies#CriteriumVereiste" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#CriteriumVereiste" data-placement="right">CriteriumVereiste</a></td>
                         <td>0...1</td>
-                        <td property="rdfs:comment">Criterium of criteriumvereiste waarop de consumptie beoordeeld wordt.</td>
+                        <td property="rdfs:comment">Criteriumvereiste waarop de consumptie beoordeeld wordt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -712,9 +722,9 @@
                             over</a>
                           </code>
                         </td>
-                        <td><a href="http://data.vlaanderen.be/ns/subsidies#CriteriumVereiste" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#CriteriumVereiste" data-placement="right">CriteriumVereiste</a></td>
+                        <td><a href="http://data.vlaanderen.be/ns/subsidies#Criterium" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#Criterium" data-placement="right">Criterium</a></td>
                         <td>0...1</td>
-                        <td property="rdfs:comment">Criterium of criteriumvereiste waarop de consumptie beoordeeld wordt.</td>
+                        <td property="rdfs:comment">Criterium waarop de consumptie beoordeeld wordt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -776,7 +786,7 @@
                             toepasbaar in periode</a>
                           </code>
                         </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#date" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#date" data-placement="right">Date</a></td>
+                        <td><a href="" data-toggle="tooltip" data-content="" data-placement="right">Periode</a></td>
                         <td>0...1</td>
                         <td property="rdfs:comment">Het expliciete tijdsvenster waarin voldaan kan worden aan de criteriumvereiste.</td>
                         <td property="vann:usageNote">Bv.: De aanvraag is mogelijk van 1 april 2019 tot 31 december 2019.</td>
@@ -842,7 +852,7 @@
                         </td>
                         <td><a href="http://www.w3.org/2001/XMLSchema#string" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#string" data-placement="right">String</a></td>
                         <td>0...1</td>
-                        <td property="rdfs:comment">TODO</td>
+                        <td property="rdfs:comment">Omschrijving van hoe het begrip wordt toegepast binnen een specifiek subsidiereglement.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1528,7 +1538,7 @@
                         </td>
                         <td><a href="http://data.vlaanderen.be/ns/subsidies#Subsidiereglement" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#Subsidiereglement" data-placement="right">Subsidiereglement</a></td>
                         <td>1</td>
-                        <td property="rdfs:comment">Het subsidiereglement waarin de subsidiemaatregel staat beschreven.</td>
+                        <td property="rdfs:comment">Het formeel kader (i.e. het besluit) waarbinnen de subsidiemaatregel werkt en waaraan ze haar wettelijke basis ontleent.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1620,8 +1630,10 @@
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Subsidiemaatregel%20Consumptie%3Aaangevraagd%20bedrag">aangevraagd bedrag</a>, 
                       <a href="#Subsidiemaatregel%20Consumptie%3Aaanvraagdatum">aanvraagdatum</a>, 
+                      <a href="#Subsidiemaatregel%20Consumptie%3Abehandelt%20een">behandelt een</a>, 
                       <a href="#Subsidiemaatregel%20Consumptie%3Ais%20instantie%20van">is instantie van</a>, 
-                      <a href="#Subsidiemaatregel%20Consumptie%3Aproduceert">produceert</a>.</dd>
+                      <a href="#Subsidiemaatregel%20Consumptie%3Aproduceert">produceert</a>, 
+                      <a href="#Subsidiemaatregel%20Consumptie%3Awordt%20uitgevoerd%20door">wordt uitgevoerd door</a>.</dd>
                     
                   </dl>
                 </div>
@@ -1669,6 +1681,20 @@
                         <td></td>
                       </tr>
                     
+                      <tr id="Subsidiemaatregel%20Consumptie%3Abehandelt%20een" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/subsidies#behandeltEen">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.vlaanderen.be/ns/subsidies#behandeltEen" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#behandeltEen" data-placement="right">
+                            behandelt een</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/subsidies#Subsidievoorwerp" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#Subsidievoorwerp" data-placement="right">Subsidievoorwerp</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">Het voorwerp dat al dan niet gesubsidieerd wordt met de consumptie.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
                       <tr id="Subsidiemaatregel%20Consumptie%3Ais%20instantie%20van" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/subsidies#isInstantieVan">
                         <td>
                           <code property="rdfs:label">
@@ -1693,6 +1719,20 @@
                         <td><a href="http://data.vlaanderen.be/ns/subsidies#FinanciëleTransactie" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#FinanciëleTransactie" data-placement="right">FinanciëleTransactie</a></td>
                         <td>0...*</td>
                         <td property="rdfs:comment">Het werkelijke resultaat van de consumptie van de subsidiemaatregel.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Subsidiemaatregel%20Consumptie%3Awordt%20uitgevoerd%20door" typeof="rdfs:Property" resource="http://data.europa.eu/m8g/serviceProvider">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="http://data.europa.eu/m8g/serviceProvider" data-toggle="tooltip" data-content="http://data.europa.eu/m8g/serviceProvider" data-placement="right">
+                            wordt uitgevoerd door</a>
+                          </code>
+                        </td>
+                        <td><a href="http://purl.org/dc/terms/Agent" data-toggle="tooltip" data-content="http://purl.org/dc/terms/Agent" data-placement="right">Agent</a></td>
+                        <td></td>
+                        <td property="rdfs:comment">De agent die de publieke dienstverlening verstrekt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -1938,6 +1978,23 @@
                   </table>
                 </div>
       			  
+            </div>
+            
+            <div class="region region--no-space-top">
+              <h3 class="h3" id="Subsidievoorwerp"><a href="http://data.vlaanderen.be/ns/subsidies#Subsidievoorwerp" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/subsidies#Subsidievoorwerp" data-placement="right">Subsidievoorwerp</a></h3>
+                <div class="region region--no-space-top">
+                  <dl>
+                    <dt>Beschrijving</dt><dd>Het object waarop de subsidiemaatregel-consumptie betrekking heeft.</dd>
+                    
+                    <dt>Gebruik</dt><dd>Bv.: Een huis, een installatie, een persoon, een evenement, etc.</dd>
+                    
+                    <dt>Eigenschappen</dt>
+                    
+                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    
+                  </dl>
+                </div>
+                
             </div>
             
             <div class="region region--no-space-top">
